@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div id="app">
+
+      <header>
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search city..."
+          autocomplete="off"
+        />
+        <button id="search-btn">Search</button>
+        <button id="location-btn">📍 My Location</button>
+      </header>
+
+      <section id="history-section">
+        <ul id="history-list"></ul>
+      </section>
+
+      <div id="loading-state" class="hidden">
+        <div class="spinner"></div>
+        <p>Fetching weather...</p></div>
+        
+      <div id="error-state" class="hidden"></div>
+      <div id="empty-state">Search for a city to see the weather.</div>
+
+      <section id="weather-section" class="hidden">
+
+        <div id="weather-main">
+          <h1 id="city-name"></h1>
+          <p id="weather-date"></p>
+          <img id="weather-icon" src="" alt="weather icon" />
+          <p id="weather-description"></p>
+          <h2 id="temperature"></h2>
+          <button id="unit-toggle">Switch to °F</button>
+        </div>
+
+        <div id="weather-details">
+          <div class="detail-card" id="feels-like"></div>
+          <div class="detail-card" id="humidity"></div>
+          <div class="detail-card" id="wind"></div>
+          <div class="detail-card" id="visibility"></div>
+          <div class="detail-card" id="pressure"></div>
+        </div>
+
+      </section>
+
+      <section id="forecast-section" class="hidden">
+        <h3>5-Day Forecast</h3>
+        <div id="forecast-list"></div>
+      </section>
+
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
